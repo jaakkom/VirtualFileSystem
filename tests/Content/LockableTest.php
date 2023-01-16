@@ -37,14 +37,14 @@ class LockableTest extends TestCase
      */
     protected $key2;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->lock = $this->getMockForTrait(LockableTrait::class);
         $this->key1 = $this->createMock(LockHolderInterface::class);
         $this->key2 = $this->createMock(LockHolderInterface::class);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->lock = null;
         $this->key1 = null;

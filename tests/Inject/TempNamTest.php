@@ -23,7 +23,7 @@ class TempNamTest extends TestCase
      */
     protected $tempNam;
     
-    public function setUp()
+    public function setUp(): void
     {
         $this->vfs = new VirtualFileSystem([
             'temp' => [],

@@ -53,7 +53,7 @@ abstract class AbstractWrapperTest extends TestCase
     /**
      * {@inheritdoc}
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->emulator = new Emulator('test-user', 'test-group');
         $this->factory = new Factory($this->emulator, [$this, 'validateFilename']);
@@ -71,7 +71,7 @@ abstract class AbstractWrapperTest extends TestCase
     /**
      * {@inheritdoc}
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
         Registry::unregister('vfs-test');
 

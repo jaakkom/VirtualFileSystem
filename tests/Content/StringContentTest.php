@@ -31,7 +31,7 @@ class StringContentTest extends TestCase
      */
     protected $content;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->content = new class(self::INITIAL_DATA) {
             use StringContentTrait;
@@ -43,7 +43,7 @@ class StringContentTest extends TestCase
         };
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->content = null;
     }

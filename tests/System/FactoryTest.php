@@ -26,12 +26,12 @@ class FactoryTest extends TestCase
 {
     protected $dir;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->dir = new Directory('test', 1000, 1000);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->dir = null;
     }

@@ -36,13 +36,13 @@ class VirtualFileSystemTest extends TestCase
      */
     protected $emulator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->emulator = new Emulator('test-user', 'test-group');
         $this->emulator->createUser('other-user', ['other-group']);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->emulator = null;
     }

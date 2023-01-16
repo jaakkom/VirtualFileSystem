@@ -81,7 +81,7 @@ trait StringContentTrait
      * @param int    $offset
      * @param int    $replace
      */
-    protected function writeData(string $data, int $offset, int $replace = 0)
+    protected function writeData(string $data, int $offset, int $replace = 0): void
     {
         $pre = substr($this->buffer, 0, $offset);
         $post = substr($this->buffer, $offset + $replace);

@@ -39,7 +39,7 @@ class GlobTest extends TestCase
      * Sets up the fixture, for example, opens a network connection.
      * This method is called before a test is executed.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->vfs = new \Twifty\VirtualFileSystem\VirtualFileSystem();
         $this->glob = new Glob($this->vfs->path('/'));
@@ -49,7 +49,7 @@ class GlobTest extends TestCase
      * Tears down the fixture, for example, closes a network connection.
      * This method is called after a test is executed.
      */
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $this->vfs = null;
         $this->glob = null;

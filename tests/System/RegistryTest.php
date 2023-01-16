@@ -22,7 +22,7 @@ use Twifty\VirtualFileSystem\System\Registry;
  */
 class RegistryTest extends TestCase
 {
-    protected function tearDown()
+    protected function tearDown(): void
     {
         $refl = (new ReflectionClass(Registry::class))->getProperty('registry');
         $refl->setAccessible(true);
